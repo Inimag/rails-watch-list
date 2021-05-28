@@ -1,12 +1,14 @@
 <div class="navbar-lewagon">
-  <div class="navbar-brand p-2" style="color: blue">
-  <%= icon('fas', 'film') %>
-  </div>
-  <div style='text-decoration: none'>
-    <div class='justify-content-between'>
-    <%= link_to 'My lists', lists_path  %>
+  <div class="d-flex p-2 m-1 justify-content-between">
+    <div class="navbar-brand p-2" style="color: blue">
+    <%= icon('fas', 'film') %>
+    </div>
+    <div style='text-decoration: none'>
+      <div class='justify-content-between align-text-center'>
+      <%= link_to 'My lists', lists_path  %>
 
-    <%= link_to 'New list', new_list_path  %>
+      <%= link_to 'New list', new_list_path  %>
+      </div>
     </div>
   </div>
 </div>
