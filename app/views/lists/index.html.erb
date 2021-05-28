@@ -1,27 +1,27 @@
-<div class='banner'>
-  <img src="rails-watch-list/app/assets/images/cinema" class="img-fluid " alt="img-cinema">
+<div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dejgdinqn/image/upload/v1622209752/cinema-4609877_1920_fkh3ty.jpg);">
+
+    <h1>Save your movies </h1>
+  </div>
 </div>
-<table>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= list.name %>
+      <%= link_to 'Show', list %>
+    </div>
+  <% end %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Lunch
+  </div>
 
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Dinner
+  </div>
+</div>
 
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.name %></td>
-        <td><%= link_to 'Show', list %></td>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<div>
-<h1>Lists</h1>
-<h2><%= link_to "➕ Add a list", new_list_path %></h2>
+  <div>
+  <h1>Lists</h1>
+  <h2><%= link_to "➕ Add a list", new_list_path %></h2>
+  </div>
 </div>
